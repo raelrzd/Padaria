@@ -1,0 +1,249 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5E7"
+    tools:context="tcc.projeto.padaria.ui.activity.ConfirmarPedidoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#F5EDD4"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/nova_opcao_" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/pagamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="18dp"
+        android:gravity="top"
+        android:text="Pagamento"
+        android:textAppearance="@style/produtos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <TextView
+        android:id="@+id/entregar_em"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:text="Escolha sua forma de pagamento: "
+        android:textAppearance="@style/produtos"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/entregar_em"
+        app:layout_constraintTop_toBottomOf="@+id/entregar_em">
+
+        <RadioButton
+            android:id="@+id/cartao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Cartão de crédito"
+            android:textAppearance="@style/produtos"
+            android:textColor="#D6964A"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/dinheiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Dinheiro"
+            android:textAppearance="@style/produtos"
+            android:textColor="#D6964A"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/pix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Pix"
+            android:textAppearance="@style/produtos"
+            android:textColor="#D6964A"
+            android:textSize="12sp"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/troco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Precisa de troco: "
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/produtos"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/entregar_em"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/troco"
+        app:layout_constraintTop_toBottomOf="@+id/troco">
+
+        <RadioButton
+            android:id="@+id/sim"
+            android:layout_width="wrap_content"
+            android:buttonTint="@color/black"
+            android:layout_height="wrap_content"
+            android:text="Sim"
+            android:textAppearance="@style/produtos"
+            android:textColor="#D6964A"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/nao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:text="Não"
+            android:textAppearance="@style/produtos"
+            android:textColor="#D6964A"
+            android:textSize="12sp" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/valorTroco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="Valor do troco:"
+        android:textAppearance="@style/produtos"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/troco"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <TextView
+        android:id="@+id/rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/produtos"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/valorTroco"
+        app:layout_constraintTop_toBottomOf="@+id/valorTroco" />
+
+    <EditText
+        android:id="@+id/input_bairro"
+        android:layout_width="99dp"
+        android:layout_height="53dp"
+        android:inputType="numberDecimal"
+        android:textAppearance="@style/total"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rs"
+        app:layout_constraintStart_toEndOf="@+id/rs"
+        app:layout_constraintTop_toTopOf="@+id/rs" />
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#F89706"
+        android:text="Confirmar"
+        android:textAppearance="@style/email_"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_total"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="#D7F89706"
+        android:visibility="visible"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/itens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/total"
+                tools:text="Total itens" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Total: "
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/valor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="22dp"
+                android:maxLength="8"
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/total"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Valor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

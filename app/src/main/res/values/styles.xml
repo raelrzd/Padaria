@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="email_">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <style name="home">
+
+        <item name="android:textSize">
+            25sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #D6964A
+        </item>
+
+    </style>
+
+    <style name="oque_deseja_home">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <style name="valor">
+
+        <item name="android:textSize">
+            24sp
+        </item>
+
+        <item name="android:textColor">
+            #D6964A
+        </item>
+
+    </style>
+
+
+    <style name="nome_produto">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+    </style>
+
+    <style name="produtos">
+
+        <item name="android:textSize">
+            25sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #D6964A
+        </item>
+
+    </style>
+
+    <style name="favoritos">
+
+        <item name="android:textSize">
+            19sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <style name="produto_combo">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <!-- styles.xml -->
+    <style name="sugestao">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <style name="total">
+
+        <item name="android:textSize">
+            22sp
+        </item>
+
+        <item name="android:fontFamily">
+            @font/montserrat
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="tipos_entrega">
+
+        <item name="android:textSize">
+            22sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            0
+        </item>
+
+        <item name="android:shadowDy">
+            4
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+    </style>
+
+
+</resources>

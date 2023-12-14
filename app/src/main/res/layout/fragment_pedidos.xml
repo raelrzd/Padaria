@@ -1,0 +1,171 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5E7"
+    tools:context="tcc.projeto.padaria.ui.fragments.PedidosFragment"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#F5EDD4"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/nova_opcao_" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/pedidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:text="Pedidos"
+        android:textAppearance="@style/produtos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <TextView
+        android:id="@+id/sugest_es_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="top"
+        android:text="Sugestão de produtos"
+        android:textAppearance="@style/sugestao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedidos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sugestoesRv"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugest_es_d"
+        tools:listitem="@layout/item_combos" />
+
+
+    <TextView
+        android:id="@+id/seus_pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:text="Seus Pedidos"
+        android:textAppearance="@style/produtos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugestoesRv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pedidosRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seus_pedido"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_produto" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_total"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="#D7F89706"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: "
+                android:textStyle="bold"
+                android:textAppearance="@style/total"
+                />
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                android:maxLength="8"
+                app:layout_constraintBottom_toBottomOf="@id/total"
+                app:layout_constraintStart_toEndOf="@id/total"
+                tools:text="Valor" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/white"
+                app:icon="@drawable/ic_baseline"
+                app:iconGravity="top"
+                app:iconTint="#F89706"
+                app:layout_constraintBottom_toBottomOf="@+id/finalizar"
+                app:layout_constraintEnd_toStartOf="@+id/finalizar"
+                app:layout_constraintTop_toTopOf="@+id/finalizar" />
+
+            <Button
+                android:id="@+id/finalizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:backgroundTint="@color/white"
+                android:shadowRadius="@integer/material_motion_duration_long_1"
+                android:text="Finalizar"
+                android:textColor="#F89706"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

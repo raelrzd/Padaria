@@ -1,0 +1,364 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5E7"
+    tools:context="tcc.projeto.padaria.ui.activity.ConfirmarPedidoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:backgroundTint="#F5EDD4"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/nova_opcao_" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/produtos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="18dp"
+        android:gravity="top"
+        android:text="Finalizar Pedido"
+        android:textAppearance="@style/produtos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_opcoes"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#D6964A"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/produtos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/entrega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:clickable="true"
+                android:gravity="center_horizontal|top"
+                android:text="Entrega"
+                android:textAppearance="@style/tipos_entrega"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewEntrega"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="visible"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/entrega"
+                app:layout_constraintEnd_toEndOf="@+id/entrega"
+                app:layout_constraintStart_toStartOf="@+id/entrega"
+                app:layout_constraintTop_toBottomOf="@+id/entrega" />
+
+
+            <TextView
+                android:id="@+id/retirada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|top"
+                android:clickable="true"
+                android:text="Retirada"
+                android:layout_marginStart="50dp"
+                android:textAppearance="@style/tipos_entrega"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/entrega"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewRetirada"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:visibility="gone"
+                android:layout_marginBottom="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/retirada"
+                app:layout_constraintEnd_toEndOf="@+id/retirada"
+                app:layout_constraintStart_toStartOf="@+id/retirada"
+                app:layout_constraintTop_toBottomOf="@+id/retirada" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_retirar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_opcoes">
+
+        <TextView
+            android:id="@+id/retirar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="top"
+            android:text="Retirar em: "
+            android:textAppearance="@style/produtos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rectangle_3"
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_margin="12dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retirar" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/localization" />
+
+                <TextView
+                    android:id="@+id/panificador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="Panificadora Nova Opção"
+                    android:textAppearance="@style/produtos"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="25dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/endereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="Pref. Salviano Pereira de\nAndrade, 1005\nWilliams - Garça SP"
+                    android:textAppearance="@style/produtos"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/panificador"
+                    app:layout_constraintTop_toBottomOf="@+id/panificador" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_entrega"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_opcoes">
+
+        <TextView
+            android:id="@+id/entregar_em"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="top"
+            android:text="Entregar em: "
+            android:textAppearance="@style/produtos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/bairro_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="top"
+            android:text="Bairro:"
+            android:textAppearance="@style/produtos"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/entregar_em"
+            app:layout_constraintTop_toBottomOf="@+id/entregar_em" />
+
+        <EditText
+            android:id="@+id/input_bairro"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textAppearance="@style/total"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/bairro_"
+            app:layout_constraintTop_toBottomOf="@+id/bairro_" />
+
+        <TextView
+            android:id="@+id/rua"
+            android:layout_width="151dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:gravity="top"
+            android:text="Rua:"
+            android:textAppearance="@style/produtos"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/bairro_"
+            app:layout_constraintTop_toBottomOf="@+id/input_bairro" />
+
+        <EditText
+            android:id="@+id/input_rua"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textAppearance="@style/total"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/input_bairro"
+            app:layout_constraintTop_toBottomOf="@+id/rua" />
+
+        <TextView
+            android:id="@+id/numero"
+            android:layout_width="151dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:gravity="top"
+            android:text="Número:"
+            android:textAppearance="@style/produtos"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/rua"
+            app:layout_constraintTop_toBottomOf="@+id/input_rua" />
+
+        <EditText
+            android:id="@+id/input_numero"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAppearance="@style/total"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/input_rua"
+            app:layout_constraintTop_toBottomOf="@+id/numero" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#F89706"
+        android:text="Confirmar"
+        android:textAppearance="@style/email_"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_total"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="#D7F89706"
+        android:visibility="visible"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/itens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/total"
+                tools:text="Total itens" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Total: "
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/valor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="22dp"
+                android:maxLength="8"
+                android:textAppearance="@style/total"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/total"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Valor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

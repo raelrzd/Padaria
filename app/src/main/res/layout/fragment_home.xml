@@ -1,0 +1,156 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAF5E7"
+    tools:context="tcc.projeto.padaria.ui.fragments.HomeFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nova_opcao_2_1" />
+
+
+        <TextView
+            android:id="@+id/ol_cec_lia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="60dp"
+            android:gravity="top"
+            android:text="Ola, Cecília"
+            android:textAppearance="@style/home"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/o_que_voc_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="O que você deseja?"
+            android:textAppearance="@style/oque_deseja_home"
+            app:layout_constraintStart_toStartOf="@+id/ol_cec_lia"
+            app:layout_constraintTop_toBottomOf="@+id/ol_cec_lia" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rectangle_2"
+            android:layout_width="0dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="#D6964A"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_que_voc_d" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_2"
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+            app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+            app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+            app:srcCompat="@drawable/meios_de_trabalho" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaHome"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="3dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_produto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_total"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="#D7F89706"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="24dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total: "
+                            android:textStyle="bold"
+                            android:textAppearance="@style/total"
+                            />
+
+                        <TextView
+                            android:id="@+id/valor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textAppearance="@style/total"
+                            android:textStyle="bold"
+                            android:maxLength="8"
+                            app:layout_constraintBottom_toBottomOf="@id/total"
+                            app:layout_constraintStart_toEndOf="@id/total"
+                            tools:text="Valor" />
+
+                        <Button
+                            android:id="@+id/clear"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="@color/white"
+                            app:icon="@drawable/ic_baseline"
+                            app:iconGravity="top"
+                            app:iconTint="#F89706"
+                            app:layout_constraintBottom_toBottomOf="@+id/finalizar"
+                            app:layout_constraintEnd_toStartOf="@+id/finalizar"
+                            app:layout_constraintTop_toTopOf="@+id/finalizar" />
+
+                        <Button
+                            android:id="@+id/finalizar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:backgroundTint="@color/white"
+                            android:shadowRadius="@integer/material_motion_duration_long_1"
+                            android:text="Finalizar"
+                            android:textColor="#F89706"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
